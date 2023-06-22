@@ -6,8 +6,8 @@ import styles from './Button.module.scss';
 const cx = classNames.bind(styles);
 
 function Button({
-   to,
    href,
+   to,
    primary = false,
    outline = false,
    text = false,
@@ -66,7 +66,20 @@ function Button({
 }
 
 Button.propTypes = {
+   href: PropTypes.string,
+   to: PropTypes.string,
+   primary: PropTypes.bool,
+   outline: PropTypes.bool,
+   text: PropTypes.bool,
+   rounded: PropTypes.bool,
+   disabled: PropTypes.bool,
+   small: PropTypes.bool,
+   large: PropTypes.bool,
    children: PropTypes.node.isRequired,
+   className: PropTypes.string,
+   leftIcon: PropTypes.node,
+   rightIcon: PropTypes.node,
+   onClick: PropTypes.func,
 };
 
 export default Button;
