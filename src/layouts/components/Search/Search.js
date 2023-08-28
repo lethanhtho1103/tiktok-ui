@@ -31,7 +31,7 @@ function Search() {
 
       const fetchApi = async () => {
          setLoading(true);
-         const result = await searchServices.search(debouncedValue);
+         const result = await searchServices.search(debouncedValue); // api đi theo luồng này
          setSearchResult(result);
          setLoading(false);
       };
